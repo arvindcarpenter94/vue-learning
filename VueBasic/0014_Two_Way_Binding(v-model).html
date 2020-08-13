@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script src="vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <input type="text" v-model="result">
+            <p>{{result}}</p>
+        </div>
+    </body>
+    <script>
+        new Vue({
+            el:'#app',
+            data : {
+                result : 'Two Way Binding'
+            }
+        });
+    </script>
+</html>

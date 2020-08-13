@@ -1,0 +1,27 @@
+<html>
+	<head>
+    		<script src="vue.js"></script>
+  	</head>
+  	<body>
+  		<div id="app">
+                <button v-on:click="incrementCounter(2, $event)">Click Me!</button>
+                 <p>{{counter}}</p>
+  		</div>
+  	</body>
+	<script>
+		new Vue({
+			el: '#app',
+  			data : 
+			{
+  			   counter:0,
+                x:0,
+                y:0
+  			},
+            methods : {
+                incrementCounter : function(step, event){
+                    this.counter+=step;
+                }
+            }
+		});
+	</script>
+</html>
