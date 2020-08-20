@@ -1,0 +1,11 @@
+package com.example.demo.service;
+
+import com.example.demo.controller.request.CreateTutorialRequest;
+
+public interface ITutorialService {
+
+	void createTutorial(CreateTutorialRequest request);
+	
+	
+
+}

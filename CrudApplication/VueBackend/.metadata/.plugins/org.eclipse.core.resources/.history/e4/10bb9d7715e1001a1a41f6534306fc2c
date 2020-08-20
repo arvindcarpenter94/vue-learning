@@ -1,0 +1,14 @@
+package com.example.demo.service.impl;
+
+import com.example.demo.controller.request.CreateTutorialRequest;
+import com.example.demo.service.ITutorialService;
+
+public class TutorialService implements ITutorialService{
+
+	@Override
+	public void createTutorial(CreateTutorialRequest request) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

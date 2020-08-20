@@ -1,0 +1,45 @@
+package com.example.demo.service.impl;
+
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.controller.request.CreateTutorialRequest;
+import com.example.demo.controller.response.TutorialResponse;
+import com.example.demo.persistence.dao.TutorilaDao;
+import com.example.demo.persistence.model.Tutorial;
+import com.example.demo.service.ITutorialService;
+
+@Service
+public class TutorialService implements ITutorialService{
+	
+	@Autowired
+	private TutorilaDao tutorialDao;
+
+	@Override
+	public void createTutorial(CreateTutorialRequest request) {
+		Tutorial tutorial = new Tutorial();
+		tutorial.setTitle(request.getTitle());
+		tutorial.setDescription(request.getDescription());
+		tutorial.setStatus(request.getStatus());
+		tutorialDao.save(tutorial);
+	}
+
+	@Override
+	public List<Tutorial> findAllTutorials() {
+		Iterable<Tutorial> iterable = tutorialDao.findAll();
+		List<Tutorial> list = StreamSupport 
+                .stream(iterable.spliterator(), false) 
+                .collect(Collectors.toList());
+		return list;
+	}
+
+	@Override
+	public Tutorial findById(Integer tutorialId) {
+		Optional<Tutorial> optionalTutorial = tutorialDao.findById(tutorialId);
+	}
+
+}

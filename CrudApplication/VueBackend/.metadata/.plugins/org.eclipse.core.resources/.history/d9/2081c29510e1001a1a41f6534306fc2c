@@ -1,0 +1,18 @@
+package com.example.demo.persistence.model;
+
+import javax.persistence.Column;
+import javax.persistence.Table;
+
+@Table(name ="tutorial")
+public class Tutorial {
+	
+	@Column(name = "tutorial_id")
+	private Integer tutorialId;
+	
+	private String title;
+	
+	private String description;
+	
+	private boolean status;
+	
+}

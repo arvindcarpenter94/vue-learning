@@ -1,0 +1,45 @@
+package com.example.demo.controller;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.example.demo.controller.request.CreateTutorialRequest;
+import com.example.demo.controller.response.TutorialResponse;
+
+@RestController
+@RequestMapping("/tutorials")
+public class TutorialController {
+	
+	@PostMapping
+	public void createNewTutorial(CreateTutorialRequest request) {
+		
+	}
+	
+	@RequestMapping(value = "", method = RequestMethod.GET)
+	public List<TutorialResponse> getAllTutorials(){
+		return null;
+	}
+	
+	@RequestMapping(value = "{tutorialId}", method = RequestMethod.GET)
+	public TutorialResponse getTutorialById(@PathVariable Integer tutorialId) {
+		return null;
+	}
+	
+	@RequestMapping(value = "{tutorialId}", method = RequestMethod.PUT)
+	public void updateTutorial(@PathVariable Integer tutorialId) {
+		
+	}
+	
+	@RequestMapping(value = "{tutorialId}", method = RequestMethod.DELETE)
+	public void deleteTutorialById(@PathVariable Integer tutorialId) {
+		
+	}
+
+}

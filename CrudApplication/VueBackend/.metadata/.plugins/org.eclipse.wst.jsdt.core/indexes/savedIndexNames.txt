@@ -1,0 +1,6 @@
+INDEX VERSION 1.4+D:\VueBackend\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1404445411.index
+4237187832.index
+845696432.index
+3799067640.index
+2433225744.index

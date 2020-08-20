@@ -1,0 +1,8 @@
+package com.example.demo.persistence.model;
+
+import javax.persistence.Table;
+
+@Table(name ="tutorial")
+public class Tutorial {
+	id, title, description, published status
+}

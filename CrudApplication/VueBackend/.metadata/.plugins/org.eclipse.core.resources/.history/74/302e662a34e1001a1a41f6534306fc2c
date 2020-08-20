@@ -1,0 +1,23 @@
+package com.example.demo.service;
+
+import java.util.List;
+
+import com.example.demo.controller.request.CreateTutorialRequest;
+import com.example.demo.controller.request.UpdateTutorialRequest;
+import com.example.demo.persistence.model.Tutorial;
+
+public interface ITutorialService {
+
+	void createTutorial(CreateTutorialRequest request);
+
+	List<Tutorial> findAllTutorials();
+
+	Tutorial findById(Integer tutorialId);
+
+	void updateTutorial(UpdateTutorialRequest request);
+
+	void deleteTutorial(Integer tutorialId);
+
+	void deleteAllTutorial();
+
+}

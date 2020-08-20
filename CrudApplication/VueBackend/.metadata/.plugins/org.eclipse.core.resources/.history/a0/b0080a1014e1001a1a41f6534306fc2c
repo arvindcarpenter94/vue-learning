@@ -1,0 +1,30 @@
+package com.example.demo.controller;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.example.demo.controller.request.CreateTutorialRequest;
+import com.example.demo.controller.response.TutorialResponse;
+
+@RestController
+@RequestMapping("/tutorials")
+public class TutorialController {
+	
+	@PostMapping
+	public void createNewTutorial(CreateTutorialRequest request) {
+		
+	}
+	
+	@GetMapping
+	public List<TutorialResponse> getAllTutorials(){
+		return null;
+	}
+	
+	@RequestMapping(value = "{id}", method = RequestMethod.POST)
+
+}
